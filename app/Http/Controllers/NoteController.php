@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Components\ImportDataClient;
+use App\Models\Note;
 
 class NoteController extends BaseController
 {
@@ -16,6 +17,8 @@ class NoteController extends BaseController
         ]);
         $data = (json_decode($responce->getBody()->getContents()));
         $this->service->update($data);
-        return redirect()->route('index');
+        $notes = Note::all();
+        return view('welcome', compact('notes'));
+
     }
 }
