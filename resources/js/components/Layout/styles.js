@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import {makeStyles} from "@material-ui/core/styles";
+import Button from '@material-ui/core/Button';
+import Toolbar from "@material-ui/core/Toolbar";
 
 const drawerWidth = 240;
 
@@ -62,7 +64,23 @@ export const useStyles = makeStyles((theme) => ({
 
 
 export const LayoutWrapper = styled.div`
-hr{
-    display: none;
-}
+    hr {
+        display: none;
+    }
+`
+export const LayoutToolbar = styled(Toolbar)`
+    display: flex;
+    justify-content: space-between;
+`
+
+export const LayoutGetData = styled(Button)`
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.75);
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    transition: all .3s;
+
+    &:hover{
+        color: #ffffff;
+        border: 2px solid #ffffff;
+    }
 `
