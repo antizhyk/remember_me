@@ -6,12 +6,14 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import Typography from "@material-ui/core/Typography";
 import {LayoutGetData, LayoutToolbar} from "../styles";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 import {getData} from "../../../redux/Note/actions";
 
 const Header = React.memo(({open, classes, handleDrawerOpen}) => {
 const dispatch = useDispatch(),
-    updateData = () => {
+    data = useSelector(({Note}) => Note.data)
+        console.log(data)
+const updateData = () => {
     dispatch(getData())
     }
 
