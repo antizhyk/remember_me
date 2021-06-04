@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Components\ImportDataClient;
+use App\Http\Resources\Note\NoteResource;
 use App\Models\Note;
 
 class NoteController extends BaseController
@@ -18,6 +19,8 @@ class NoteController extends BaseController
         $data = (json_decode($responce->getBody()->getContents()));
         $this->service->update($data);
         $notes = Note::all();
+        return NoteResource::collection($notes);
+
         return view('welcome', compact('notes'));
 
     }

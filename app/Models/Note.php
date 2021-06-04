@@ -10,7 +10,7 @@ class Note extends Model
     use HasFactory;
     protected $guarded = false;
 
-    public function folders()
+    public function folder()
     {
         return $this->belongsTo(Folder::class);
     }
