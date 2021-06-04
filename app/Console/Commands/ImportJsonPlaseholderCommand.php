@@ -45,8 +45,17 @@ class ImportJsonPlaseholderCommand extends Command
             ]
         ]);
         $data = (json_decode($responce->getBody()->getContents()));
-        foreach ($data as $item){
-            dd($item);
+        foreach ($data as $item) {
+            $folder = substr($item->folderPathname, 1);
+            Folder::firstOrCreate(
+                ['title' => $folder],
+                ['title' => $folder]);
+            $key = Folder::where('title', $folder)->get();
+            Note::firstOrCreate(
+                ['title' => $item->title],
+                [   'title' => $item->title,
+                    'content' => $item->head->content,
+                    'folder_id' => $key->id]);
         }
     }
 }

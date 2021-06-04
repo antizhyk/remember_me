@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7759431e303e2d722a264a8a991a9e84",
+    "content-hash": "b9525a33fe2614281e175cecb91dbee3",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -858,16 +858,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v8.45.0",
+            "version": "v8.45.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "ecbc4622021b10287c36757a2867ba343f7698a0"
+                "reference": "dc2f0bb02c3eb4b27669d626bb3e810db8e7749d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/ecbc4622021b10287c36757a2867ba343f7698a0",
-                "reference": "ecbc4622021b10287c36757a2867ba343f7698a0",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/dc2f0bb02c3eb4b27669d626bb3e810db8e7749d",
+                "reference": "dc2f0bb02c3eb4b27669d626bb3e810db8e7749d",
                 "shasum": ""
             },
             "require": {
@@ -1022,7 +1022,7 @@
                 "issues": "https://github.com/laravel/framework/issues",
                 "source": "https://github.com/laravel/framework"
             },
-            "time": "2021-06-03T15:26:12+00:00"
+            "time": "2021-06-03T16:39:17+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -4967,16 +4967,16 @@
         },
         {
             "name": "facade/ignition",
-            "version": "2.10.0",
+            "version": "2.10.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/facade/ignition.git",
-                "reference": "478aef936468b4fb4c3dd04a9a0b66d54eab60f3"
+                "reference": "508d80f91de953617977e5666f8953669b6e81f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/facade/ignition/zipball/478aef936468b4fb4c3dd04a9a0b66d54eab60f3",
-                "reference": "478aef936468b4fb4c3dd04a9a0b66d54eab60f3",
+                "url": "https://api.github.com/repos/facade/ignition/zipball/508d80f91de953617977e5666f8953669b6e81f2",
+                "reference": "508d80f91de953617977e5666f8953669b6e81f2",
                 "shasum": ""
             },
             "require": {
@@ -5040,7 +5040,7 @@
                 "issues": "https://github.com/facade/ignition/issues",
                 "source": "https://github.com/facade/ignition"
             },
-            "time": "2021-06-03T07:01:25+00:00"
+            "time": "2021-06-03T21:41:42+00:00"
         },
         {
             "name": "facade/ignition-contracts",
@@ -7338,7 +7338,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3|^8.0"
+        "php": "^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"
