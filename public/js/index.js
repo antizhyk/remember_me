@@ -1510,7 +1510,7 @@ var AppBar = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function
   /**
    * The positioning type. The behavior of the different options is described
    * [in the MDN web docs](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Positioning).
-   * Note: `sticky` is not universally supported and will fall back to `static` when unavailable.
+   * Service: `sticky` is not universally supported and will fall back to `static` when unavailable.
    */
   position: prop_types__WEBPACK_IMPORTED_MODULE_3___default().oneOf(['absolute', 'fixed', 'relative', 'static', 'sticky'])
 } : 0;
@@ -6482,7 +6482,7 @@ var Typography = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(func
   /**
    * If `true`, the text will not wrap, but instead will truncate with a text overflow ellipsis.
    *
-   * Note that text overflow can only happen with block or inline-block level elements
+   * Service that text overflow can only happen with block or inline-block level elements
    * (the element needs to have a width in order to overflow).
    */
   noWrap: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool),
@@ -7106,7 +7106,7 @@ function hslToRgb(color) {
 /**
  * Returns an object with the type and values of a color.
  *
- * Note: Does not support rgb % values.
+ * Service: Does not support rgb % values.
  *
  * @param {string} color - CSS color, i.e. one of: #nnn, #nnnnnn, rgb(), rgba(), hsl(), hsla()
  * @returns {object} - A MUI color object: {type: string, values: number[]}
@@ -14303,7 +14303,7 @@ var Header = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.memo(function (_ref
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_styles__WEBPACK_IMPORTED_MODULE_2__.LayoutGetData, {
         variant: "outlined",
         href: "/get_data",
-        children: "refresh"
+        children: "update"
       })]
     })
   });
@@ -15358,7 +15358,7 @@ var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
 var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
 
 function isValidElementType(type) {
-  return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+  return typeof type === 'string' || typeof type === 'function' || // Service: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
   type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
 }
 
@@ -24488,7 +24488,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * A specialized version of `baseIsEqualDeep` for comparing objects of
      * the same `toStringTag`.
      *
-     * **Note:** This function only supports comparing values with tags of
+     * **Service:** This function only supports comparing values with tags of
      * `Boolean`, `Date`, `Error`, `Number`, `RegExp`, or `String`.
      *
      * @private
@@ -24987,7 +24987,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Initializes an object clone based on its `toStringTag`.
      *
-     * **Note:** This function only supports cloning values with tags of
+     * **Service:** This function only supports cloning values with tags of
      * `Boolean`, `Date`, `Error`, `Map`, `Number`, `RegExp`, `Set`, or `String`.
      *
      * @private
@@ -25435,7 +25435,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Sets metadata for `func`.
      *
-     * **Note:** If this function becomes hot, i.e. is invoked a lot in a short
+     * **Service:** If this function becomes hot, i.e. is invoked a lot in a short
      * period of time, it will trip its breaker and transition to an identity
      * function to avoid garbage collection pauses in V8. See
      * [V8 issue 2070](https://bugs.chromium.org/p/v8/issues/detail?id=2070)
@@ -25743,7 +25743,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * for equality comparisons. The order and references of result values are
      * determined by the first array.
      *
-     * **Note:** Unlike `_.pullAll`, this method returns a new array.
+     * **Service:** Unlike `_.pullAll`, this method returns a new array.
      *
      * @static
      * @memberOf _
@@ -25771,7 +25771,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * determined by the first array. The iteratee is invoked with one argument:
      * (value).
      *
-     * **Note:** Unlike `_.pullAllBy`, this method returns a new array.
+     * **Service:** Unlike `_.pullAllBy`, this method returns a new array.
      *
      * @static
      * @memberOf _
@@ -25806,7 +25806,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * references of result values are determined by the first array. The comparator
      * is invoked with two arguments: (arrVal, othVal).
      *
-     * **Note:** Unlike `_.pullAllWith`, this method returns a new array.
+     * **Service:** Unlike `_.pullAllWith`, this method returns a new array.
      *
      * @static
      * @memberOf _
@@ -25988,7 +25988,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * Fills elements of `array` with `value` from `start` up to, but not
      * including, `end`.
      *
-     * **Note:** This method mutates `array`.
+     * **Service:** This method mutates `array`.
      *
      * @static
      * @memberOf _
@@ -26491,7 +26491,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
      * for equality comparisons.
      *
-     * **Note:** Unlike `_.without`, this method mutates `array`. Use `_.remove`
+     * **Service:** Unlike `_.without`, this method mutates `array`. Use `_.remove`
      * to remove elements from an array by predicate.
      *
      * @static
@@ -26514,7 +26514,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * This method is like `_.pull` except that it accepts an array of values to remove.
      *
-     * **Note:** Unlike `_.difference`, this method mutates `array`.
+     * **Service:** Unlike `_.difference`, this method mutates `array`.
      *
      * @static
      * @memberOf _
@@ -26542,7 +26542,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * invoked for each element of `array` and `values` to generate the criterion
      * by which they're compared. The iteratee is invoked with one argument: (value).
      *
-     * **Note:** Unlike `_.differenceBy`, this method mutates `array`.
+     * **Service:** Unlike `_.differenceBy`, this method mutates `array`.
      *
      * @static
      * @memberOf _
@@ -26571,7 +26571,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * is invoked to compare elements of `array` to `values`. The comparator is
      * invoked with two arguments: (arrVal, othVal).
      *
-     * **Note:** Unlike `_.differenceWith`, this method mutates `array`.
+     * **Service:** Unlike `_.differenceWith`, this method mutates `array`.
      *
      * @static
      * @memberOf _
@@ -26599,7 +26599,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * Removes elements from `array` corresponding to `indexes` and returns an
      * array of removed elements.
      *
-     * **Note:** Unlike `_.at`, this method mutates `array`.
+     * **Service:** Unlike `_.at`, this method mutates `array`.
      *
      * @static
      * @memberOf _
@@ -26635,7 +26635,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * and returns an array of the removed elements. The predicate is invoked
      * with three arguments: (value, index, array).
      *
-     * **Note:** Unlike `_.filter`, this method mutates `array`. Use `_.pull`
+     * **Service:** Unlike `_.filter`, this method mutates `array`. Use `_.pull`
      * to pull elements from an array by value.
      *
      * @static
@@ -26683,7 +26683,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * Reverses `array` so that the first element becomes the last, the second
      * element becomes the second to last, and so on.
      *
-     * **Note:** This method mutates `array` and is based on
+     * **Service:** This method mutates `array` and is based on
      * [`Array#reverse`](https://mdn.io/Array/reverse).
      *
      * @static
@@ -26709,7 +26709,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Creates a slice of `array` from `start` up to, but not including, `end`.
      *
-     * **Note:** This method is used instead of
+     * **Service:** This method is used instead of
      * [`Array#slice`](https://mdn.io/Array/slice) to ensure dense arrays are
      * returned.
      *
@@ -27331,7 +27331,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
      * for equality comparisons.
      *
-     * **Note:** Unlike `_.pull`, this method returns a new array.
+     * **Service:** Unlike `_.pull`, this method returns a new array.
      *
      * @static
      * @memberOf _
@@ -27811,7 +27811,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * This method is the wrapper version of `_.reverse`.
      *
-     * **Note:** This method mutates the wrapped array.
+     * **Service:** This method mutates the wrapped array.
      *
      * @name reverse
      * @memberOf _
@@ -27901,7 +27901,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * Iteration is stopped once `predicate` returns falsey. The predicate is
      * invoked with three arguments: (value, index|key, collection).
      *
-     * **Note:** This method returns `true` for
+     * **Service:** This method returns `true` for
      * [empty collections](https://en.wikipedia.org/wiki/Empty_set) because
      * [everything is true](https://en.wikipedia.org/wiki/Vacuous_truth) of
      * elements of empty collections.
@@ -27950,7 +27950,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * `predicate` returns truthy for. The predicate is invoked with three
      * arguments: (value, index|key, collection).
      *
-     * **Note:** Unlike `_.remove`, this method returns a new array.
+     * **Service:** Unlike `_.remove`, this method returns a new array.
      *
      * @static
      * @memberOf _
@@ -28130,7 +28130,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * The iteratee is invoked with three arguments: (value, index|key, collection).
      * Iteratee functions may exit iteration early by explicitly returning `false`.
      *
-     * **Note:** As with other "Collections" methods, objects with a "length"
+     * **Service:** As with other "Collections" methods, objects with a "length"
      * property are iterated like arrays. To avoid this behavior use `_.forIn`
      * or `_.forOwn` for object iteration.
      *
@@ -28881,7 +28881,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * The `_.bind.placeholder` value, which defaults to `_` in monolithic builds,
      * may be used as a placeholder for partially applied arguments.
      *
-     * **Note:** Unlike native `Function#bind`, this method doesn't set the "length"
+     * **Service:** Unlike native `Function#bind`, this method doesn't set the "length"
      * property of bound functions.
      *
      * @static
@@ -28982,7 +28982,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * The `_.curry.placeholder` value, which defaults to `_` in monolithic builds,
      * may be used as a placeholder for provided arguments.
      *
-     * **Note:** This method doesn't set the "length" property of curried functions.
+     * **Service:** This method doesn't set the "length" property of curried functions.
      *
      * @static
      * @memberOf _
@@ -29027,7 +29027,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * The `_.curryRight.placeholder` value, which defaults to `_` in monolithic
      * builds, may be used as a placeholder for provided arguments.
      *
-     * **Note:** This method doesn't set the "length" property of curried functions.
+     * **Service:** This method doesn't set the "length" property of curried functions.
      *
      * @static
      * @memberOf _
@@ -29076,7 +29076,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * calls to the debounced function return the result of the last `func`
      * invocation.
      *
-     * **Note:** If `leading` and `trailing` options are `true`, `func` is
+     * **Service:** If `leading` and `trailing` options are `true`, `func` is
      * invoked on the trailing edge of the timeout only if the debounced function
      * is invoked more than once during the `wait` timeout.
      *
@@ -29318,7 +29318,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * provided to the memoized function is used as the map cache key. The `func`
      * is invoked with the `this` binding of the memoized function.
      *
-     * **Note:** The cache is exposed as the `cache` property on the memoized
+     * **Service:** The cache is exposed as the `cache` property on the memoized
      * function. Its creation may be customized by replacing the `_.memoize.Cache`
      * constructor with one whose instances implement the
      * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
@@ -29492,7 +29492,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * The `_.partial.placeholder` value, which defaults to `_` in monolithic
      * builds, may be used as a placeholder for partially applied arguments.
      *
-     * **Note:** This method doesn't set the "length" property of partially
+     * **Service:** This method doesn't set the "length" property of partially
      * applied functions.
      *
      * @static
@@ -29529,7 +29529,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * The `_.partialRight.placeholder` value, which defaults to `_` in monolithic
      * builds, may be used as a placeholder for partially applied arguments.
      *
-     * **Note:** This method doesn't set the "length" property of partially
+     * **Service:** This method doesn't set the "length" property of partially
      * applied functions.
      *
      * @static
@@ -29590,7 +29590,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * created function and arguments from `start` and beyond provided as
      * an array.
      *
-     * **Note:** This method is based on the
+     * **Service:** This method is based on the
      * [rest parameter](https://mdn.io/rest_parameters).
      *
      * @static
@@ -29623,7 +29623,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * create function and an array of arguments much like
      * [`Function#apply`](http://www.ecma-international.org/ecma-262/7.0/#sec-function.prototype.apply).
      *
-     * **Note:** This method is based on the
+     * **Service:** This method is based on the
      * [spread operator](https://mdn.io/spread_operator).
      *
      * @static
@@ -29678,7 +29678,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * throttled function. Subsequent calls to the throttled function return the
      * result of the last `func` invocation.
      *
-     * **Note:** If `leading` and `trailing` options are `true`, `func` is
+     * **Service:** If `leading` and `trailing` options are `true`, `func` is
      * invoked on the trailing edge of the timeout only if the throttled function
      * is invoked more than once during the `wait` timeout.
      *
@@ -29821,7 +29821,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Creates a shallow clone of `value`.
      *
-     * **Note:** This method is loosely based on the
+     * **Service:** This method is loosely based on the
      * [structured clone algorithm](https://mdn.io/Structured_clone_algorithm)
      * and supports cloning arrays, array buffers, booleans, date objects, maps,
      * numbers, `Object` objects, regexes, sets, strings, symbols, and typed
@@ -29943,7 +29943,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * Checks if `object` conforms to `source` by invoking the predicate
      * properties of `source` with the corresponding property values of `object`.
      *
-     * **Note:** This method is equivalent to `_.conforms` when `source` is
+     * **Service:** This method is equivalent to `_.conforms` when `source` is
      * partially applied.
      *
      * @static
@@ -30322,7 +30322,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * Performs a deep comparison between two values to determine if they are
      * equivalent.
      *
-     * **Note:** This method supports comparing arrays, array buffers, booleans,
+     * **Service:** This method supports comparing arrays, array buffers, booleans,
      * date objects, error objects, maps, numbers, `Object` objects, regexes,
      * sets, strings, symbols, and typed arrays. `Object` objects are compared
      * by their own, not inherited, enumerable properties. Functions and DOM
@@ -30418,7 +30418,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Checks if `value` is a finite primitive number.
      *
-     * **Note:** This method is based on
+     * **Service:** This method is based on
      * [`Number.isFinite`](https://mdn.io/Number/isFinite).
      *
      * @static
@@ -30475,7 +30475,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Checks if `value` is an integer.
      *
-     * **Note:** This method is based on
+     * **Service:** This method is based on
      * [`Number.isInteger`](https://mdn.io/Number/isInteger).
      *
      * @static
@@ -30505,7 +30505,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Checks if `value` is a valid array-like length.
      *
-     * **Note:** This method is loosely based on
+     * **Service:** This method is loosely based on
      * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
      *
      * @static
@@ -30614,7 +30614,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * Performs a partial deep comparison between `object` and `source` to
      * determine if `object` contains equivalent property values.
      *
-     * **Note:** This method is equivalent to `_.matches` when `source` is
+     * **Service:** This method is equivalent to `_.matches` when `source` is
      * partially applied.
      *
      * Partial comparisons will match empty array and empty object `source`
@@ -30682,7 +30682,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Checks if `value` is `NaN`.
      *
-     * **Note:** This method is based on
+     * **Service:** This method is based on
      * [`Number.isNaN`](https://mdn.io/Number/isNaN) and is not the same as
      * global [`isNaN`](https://mdn.io/isNaN) which returns `true` for
      * `undefined` and other non-number values.
@@ -30717,7 +30717,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Checks if `value` is a pristine native function.
      *
-     * **Note:** This method can't reliably detect native functions in the presence
+     * **Service:** This method can't reliably detect native functions in the presence
      * of the core-js package because core-js circumvents this kind of detection.
      * Despite multiple requests, the core-js maintainer has made it clear: any
      * attempt to fix the detection will be obstructed. As a result, we're left
@@ -30795,7 +30795,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Checks if `value` is classified as a `Number` primitive or object.
      *
-     * **Note:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are
+     * **Service:** To exclude `Infinity`, `-Infinity`, and `NaN`, which are
      * classified as numbers, use the `_.isFinite` method.
      *
      * @static
@@ -30887,7 +30887,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * Checks if `value` is a safe integer. An integer is safe if it's an IEEE-754
      * double precision number which isn't the result of a rounded unsafe integer.
      *
-     * **Note:** This method is based on
+     * **Service:** This method is based on
      * [`Number.isSafeInteger`](https://mdn.io/Number/isSafeInteger).
      *
      * @static
@@ -31188,7 +31188,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Converts `value` to an integer.
      *
-     * **Note:** This method is loosely based on
+     * **Service:** This method is loosely based on
      * [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
      *
      * @static
@@ -31222,7 +31222,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * Converts `value` to an integer suitable for use as the length of an
      * array-like object.
      *
-     * **Note:** This method is based on
+     * **Service:** This method is based on
      * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
      *
      * @static
@@ -31383,7 +31383,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * destination object. Source objects are applied from left to right.
      * Subsequent sources overwrite property assignments of previous sources.
      *
-     * **Note:** This method mutates `object` and is loosely based on
+     * **Service:** This method mutates `object` and is loosely based on
      * [`Object.assign`](https://mdn.io/Object/assign).
      *
      * @static
@@ -31426,7 +31426,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * This method is like `_.assign` except that it iterates over own and
      * inherited source properties.
      *
-     * **Note:** This method mutates `object`.
+     * **Service:** This method mutates `object`.
      *
      * @static
      * @memberOf _
@@ -31463,7 +31463,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * `undefined`, assignment is handled by the method instead. The `customizer`
      * is invoked with five arguments: (objValue, srcValue, key, object, source).
      *
-     * **Note:** This method mutates `object`.
+     * **Service:** This method mutates `object`.
      *
      * @static
      * @memberOf _
@@ -31496,7 +31496,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * `undefined`, assignment is handled by the method instead. The `customizer`
      * is invoked with five arguments: (objValue, srcValue, key, object, source).
      *
-     * **Note:** This method mutates `object`.
+     * **Service:** This method mutates `object`.
      *
      * @static
      * @memberOf _
@@ -31586,7 +31586,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * resolve to `undefined`. Source objects are applied from left to right.
      * Once a property is set, additional values of the same property are ignored.
      *
-     * **Note:** This method mutates `object`.
+     * **Service:** This method mutates `object`.
      *
      * @static
      * @since 0.1.0
@@ -31636,7 +31636,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * This method is like `_.defaults` except that it recursively assigns
      * default properties.
      *
-     * **Note:** This method mutates `object`.
+     * **Service:** This method mutates `object`.
      *
      * @static
      * @memberOf _
@@ -32096,7 +32096,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Creates an array of the own enumerable property names of `object`.
      *
-     * **Note:** Non-object values are coerced to objects. See the
+     * **Service:** Non-object values are coerced to objects. See the
      * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
      * for more details.
      *
@@ -32128,7 +32128,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Creates an array of the own and inherited enumerable property names of `object`.
      *
-     * **Note:** Non-object values are coerced to objects.
+     * **Service:** Non-object values are coerced to objects.
      *
      * @static
      * @memberOf _
@@ -32230,7 +32230,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * assignment. Source objects are applied from left to right. Subsequent
      * sources overwrite property assignments of previous sources.
      *
-     * **Note:** This method mutates `object`.
+     * **Service:** This method mutates `object`.
      *
      * @static
      * @memberOf _
@@ -32263,7 +32263,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * method instead. The `customizer` is invoked with six arguments:
      * (objValue, srcValue, key, object, source, stack).
      *
-     * **Note:** This method mutates `object`.
+     * **Service:** This method mutates `object`.
      *
      * @static
      * @memberOf _
@@ -32295,7 +32295,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * The opposite of `_.pick`; this method creates an object composed of the
      * own and inherited enumerable property paths of `object` that are not omitted.
      *
-     * **Note:** This method is considerably slower than `_.pick`.
+     * **Service:** This method is considerably slower than `_.pick`.
      *
      * @static
      * @since 0.1.0
@@ -32466,7 +32466,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * are created for all other missing properties. Use `_.setWith` to customize
      * `path` creation.
      *
-     * **Note:** This method mutates `object`.
+     * **Service:** This method mutates `object`.
      *
      * @static
      * @memberOf _
@@ -32498,7 +32498,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * path creation is handled by the method instead. The `customizer` is invoked
      * with three arguments: (nsValue, key, nsObject).
      *
-     * **Note:** This method mutates `object`.
+     * **Service:** This method mutates `object`.
      *
      * @static
      * @memberOf _
@@ -32629,7 +32629,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Removes the property at `path` of `object`.
      *
-     * **Note:** This method mutates `object`.
+     * **Service:** This method mutates `object`.
      *
      * @static
      * @memberOf _
@@ -32662,7 +32662,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * value to set. Use `_.updateWith` to customize `path` creation. The `updater`
      * is invoked with one argument: (value).
      *
-     * **Note:** This method mutates `object`.
+     * **Service:** This method mutates `object`.
      *
      * @static
      * @memberOf _
@@ -32694,7 +32694,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * path creation is handled by the method instead. The `customizer` is invoked
      * with three arguments: (nsValue, key, nsObject).
      *
-     * **Note:** This method mutates `object`.
+     * **Service:** This method mutates `object`.
      *
      * @static
      * @memberOf _
@@ -32720,7 +32720,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Creates an array of the own enumerable string keyed property values of `object`.
      *
-     * **Note:** Non-object values are coerced to objects.
+     * **Service:** Non-object values are coerced to objects.
      *
      * @static
      * @since 0.1.0
@@ -32751,7 +32751,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * Creates an array of the own and inherited enumerable string keyed property
      * values of `object`.
      *
-     * **Note:** Non-object values are coerced to objects.
+     * **Service:** Non-object values are coerced to objects.
      *
      * @static
      * @memberOf _
@@ -32868,7 +32868,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * is returned. If `floating` is `true`, or either `lower` or `upper` are
      * floats, a floating-point number is returned instead of an integer.
      *
-     * **Note:** JavaScript follows the IEEE-754 standard for resolving
+     * **Service:** JavaScript follows the IEEE-754 standard for resolving
      * floating-point values which can produce unexpected results.
      *
      * @static
@@ -33042,7 +33042,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * Converts the characters "&", "<", ">", '"', and "'" in `string` to their
      * corresponding HTML entities.
      *
-     * **Note:** No other characters are escaped. To escape additional
+     * **Service:** No other characters are escaped. To escape additional
      * characters use a third-party library like [_he_](https://mths.be/he).
      *
      * Though the ">" character is escaped for symmetry, characters like
@@ -33273,7 +33273,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * `undefined` or `0`, a `radix` of `10` is used unless `value` is a
      * hexadecimal, in which case a `radix` of `16` is used.
      *
-     * **Note:** This method aligns with the
+     * **Service:** This method aligns with the
      * [ES5 implementation](https://es5.github.io/#x15.1.2.2) of `parseInt`.
      *
      * @static
@@ -33335,7 +33335,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Replaces matches for `pattern` in `string` with `replacement`.
      *
-     * **Note:** This method is based on
+     * **Service:** This method is based on
      * [`String#replace`](https://mdn.io/String/replace).
      *
      * @static
@@ -33386,7 +33386,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
     /**
      * Splits `string` by `separator`.
      *
-     * **Note:** This method is based on
+     * **Service:** This method is based on
      * [`String#split`](https://mdn.io/String/split).
      *
      * @static
@@ -33488,7 +33488,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * properties may be accessed as free variables in the template. If a setting
      * object is given, it takes precedence over `_.templateSettings` values.
      *
-     * **Note:** In the development build `_.template` utilizes
+     * **Service:** In the development build `_.template` utilizes
      * [sourceURLs](http://www.html5rocks.com/en/tutorials/developertools/sourcemaps/#toc-sourceurl)
      * for easier debugging.
      *
@@ -33954,7 +33954,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * `&amp;`, `&lt;`, `&gt;`, `&quot;`, and `&#39;` in `string` to
      * their corresponding characters.
      *
-     * **Note:** No other HTML entities are unescaped. To unescape additional
+     * **Service:** No other HTML entities are unescaped. To unescape additional
      * HTML entities use a third-party library like [_he_](https://mths.be/he).
      *
      * @static
@@ -34083,7 +34083,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * Binds methods of an object to the object itself, overwriting the existing
      * method.
      *
-     * **Note:** This method doesn't set the "length" property of bound functions.
+     * **Service:** This method doesn't set the "length" property of bound functions.
      *
      * @static
      * @since 0.1.0
@@ -34169,7 +34169,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * the corresponding property values of a given object, returning `true` if
      * all predicates return truthy, else `false`.
      *
-     * **Note:** The created function is equivalent to `_.conformsTo` with
+     * **Service:** The created function is equivalent to `_.conformsTo` with
      * `source` partially applied.
      *
      * @static
@@ -34359,14 +34359,14 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * object and `source`, returning `true` if the given object has equivalent
      * property values, else `false`.
      *
-     * **Note:** The created function is equivalent to `_.isMatch` with `source`
+     * **Service:** The created function is equivalent to `_.isMatch` with `source`
      * partially applied.
      *
      * Partial comparisons will match empty array and empty object `source`
      * values against any array or object value, respectively. See `_.isEqual`
      * for a list of supported value comparisons.
      *
-     * **Note:** Multiple values can be checked by combining several matchers
+     * **Service:** Multiple values can be checked by combining several matchers
      * using `_.overSome`
      *
      * @static
@@ -34398,11 +34398,11 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * value at `path` of a given object to `srcValue`, returning `true` if the
      * object value is equivalent, else `false`.
      *
-     * **Note:** Partial comparisons will match empty array and empty object
+     * **Service:** Partial comparisons will match empty array and empty object
      * `srcValue` values against any array or object value, respectively. See
      * `_.isEqual` for a list of supported value comparisons.
      *
-     * **Note:** Multiple values can be checked by combining several matchers
+     * **Service:** Multiple values can be checked by combining several matchers
      * using `_.overSome`
      *
      * @static
@@ -34494,7 +34494,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * object to the destination object. If `object` is a function, then methods
      * are added to its prototype as well.
      *
-     * **Note:** Use `_.runInContext` to create a pristine `lodash` function to
+     * **Service:** Use `_.runInContext` to create a pristine `lodash` function to
      * avoid conflicts caused by modifying the original.
      *
      * @static
@@ -34766,7 +34766,7 @@ var __WEBPACK_AMD_DEFINE_RESULT__;/**
      * `start` is specified without an `end` or `step`. If `end` is not specified,
      * it's set to `start` with `start` then set to `0`.
      *
-     * **Note:** JavaScript follows the IEEE-754 standard for resolving
+     * **Service:** JavaScript follows the IEEE-754 standard for resolving
      * floating-point values which can produce unexpected results.
      *
      * @static
@@ -37073,7 +37073,7 @@ var REACT_RESPONDER_TYPE = hasSymbol ? Symbol.for('react.responder') : 0xead6;
 var REACT_SCOPE_TYPE = hasSymbol ? Symbol.for('react.scope') : 0xead7;
 
 function isValidElementType(type) {
-  return typeof type === 'string' || typeof type === 'function' || // Note: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
+  return typeof type === 'string' || typeof type === 'function' || // Service: its typeof might be other than 'symbol' or 'number' if it's a polyfill.
   type === REACT_FRAGMENT_TYPE || type === REACT_CONCURRENT_MODE_TYPE || type === REACT_PROFILER_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || typeof type === 'object' && type !== null && (type.$$typeof === REACT_LAZY_TYPE || type.$$typeof === REACT_MEMO_TYPE || type.$$typeof === REACT_PROVIDER_TYPE || type.$$typeof === REACT_CONTEXT_TYPE || type.$$typeof === REACT_FORWARD_REF_TYPE || type.$$typeof === REACT_FUNDAMENTAL_TYPE || type.$$typeof === REACT_RESPONDER_TYPE || type.$$typeof === REACT_SCOPE_TYPE || type.$$typeof === REACT_BLOCK_TYPE);
 }
 
@@ -37597,7 +37597,7 @@ reservedProps.forEach(function (name) {
   false);
 }); // These are HTML boolean attributes.
 
-['allowFullScreen', 'async', // Note: there is a special case that prevents it from being written to the DOM
+['allowFullScreen', 'async', // Service: there is a special case that prevents it from being written to the DOM
 // on the client side because the browsers are inconsistent. Instead we call focus().
 'autoFocus', 'autoPlay', 'controls', 'default', 'defer', 'disabled', 'disablePictureInPicture', 'disableRemotePlayback', 'formNoValidate', 'hidden', 'loop', 'noModule', 'noValidate', 'open', 'playsInline', 'readOnly', 'required', 'reversed', 'scoped', 'seamless', // Microdata
 'itemScope'].forEach(function (name) {
@@ -37609,7 +37609,7 @@ reservedProps.forEach(function (name) {
 }); // These are the few React props that we set as DOM properties
 // rather than attributes. These are all booleans.
 
-['checked', // Note: `option.selected` is not updated if `select.multiple` is
+['checked', // Service: `option.selected` is not updated if `select.multiple` is
 // disabled with `removeAttribute`. We have special logic for handling this.
 'multiple', 'muted', 'selected' // NOTE: if you add a camelCased prop to this list,
 // you'll need to set attributeName to name.toLowerCase()
@@ -38969,7 +38969,7 @@ var didWarnInvalidChild = false;
 function flattenChildren(children) {
   var content = ''; // Flatten children. We'll warn if they are invalid
   // during validateProps() which runs for hydration too.
-  // Note that this would throw on non-element objects.
+  // Service that this would throw on non-element objects.
   // Elements are stringified (which is normally irrelevant
   // but matters for <fbt>).
 
@@ -38978,7 +38978,7 @@ function flattenChildren(children) {
       return;
     }
 
-    content += child; // Note: we don't warn about invalid children here.
+    content += child; // Service: we don't warn about invalid children here.
     // Instead, this is done separately below so that
     // it happens during the hydration code path too.
   });
@@ -39613,7 +39613,7 @@ Object.keys(isUnitlessNumber).forEach(function (prop) {
  */
 
 function dangerousStyleValue(name, value, isCustomProperty) {
-  // Note that we've removed escapeTextForBrowser() calls here since the
+  // Service that we've removed escapeTextForBrowser() calls here since the
   // whole string will be escaped when the attribute is injected into
   // the markup. If you provide unsafe user data here they can inject
   // arbitrary CSS which may be problematic (I couldn't repro this):
@@ -39924,7 +39924,7 @@ var HTML = '__html';
 function assertValidProps(tag, props) {
   if (!props) {
     return;
-  } // Note the use of `==` which checks for null or undefined.
+  } // Service the use of `==` which checks for null or undefined.
 
 
   if (voidElementTags[tag]) {
@@ -41356,7 +41356,7 @@ function clearCaughtError() {
  * methods to accept the user facing instance as an argument and map them back
  * to internal methods.
  *
- * Note that this module is currently shared and assumed to be stateless.
+ * Service that this module is currently shared and assumed to be stateless.
  * If this becomes an actual Map, that will break.
  */
 function get(key) {
@@ -42320,7 +42320,7 @@ function setEventPriorities(eventTypes, priority) {
 }
 
 function getEventPriorityForPluginSystem(domEventName) {
-  var priority = eventPriorities.get(domEventName); // Default to a ContinuousEvent. Note: we might
+  var priority = eventPriorities.get(domEventName); // Default to a ContinuousEvent. Service: we might
   // want to warn if we can't detect the priority
   // for the event.
 
@@ -42675,7 +42675,7 @@ function getNextLanes(root, wipLanes) {
   // when multiple updates have the same source, and we only want to respond to
   // the most recent event from that source.
   //
-  // Note that we apply entanglements *after* checking for partial work above.
+  // Service that we apply entanglements *after* checking for partial work above.
   // This means that if a lane is entangled during an interleaved event while
   // it's already rendering, we won't interrupt it. This is intentional, since
   // entanglement is usually "best effort": we'll try our best to render the
@@ -44909,7 +44909,7 @@ function getModernOffsetsFromPoints(outerNode, anchorNode, anchorOffset, focusNo
  * In modern non-IE browsers, we can support both forward and backward
  * selections.
  *
- * Note: IE10+ supports the Selection object, but it does not support
+ * Service: IE10+ supports the Selection object, but it does not support
  * the `extend` method, which means that even in modern IE, it's not possible
  * to programmatically create a backward selection. Thus, for all IE
  * versions, we use the old IE API to create our selections.
@@ -47017,7 +47017,7 @@ var updatedAncestorInfo = function () {};
   // This validation code was written based on the HTML5 parsing spec:
   // https://html.spec.whatwg.org/multipage/syntax.html#has-an-element-in-scope
   //
-  // Note: this does not catch all invalid nesting, nor does it try to (as it's
+  // Service: this does not catch all invalid nesting, nor does it try to (as it's
   // not clear what practical benefit doing so provides); instead, we warn only
   // for cases where the parser will give a parse tree differing from what React
   // intended. For example, <b><div></div></b> is invalid but we don't warn
@@ -47832,7 +47832,7 @@ function getClosestInstanceFromNode(targetNode) {
     // React nodes in the future. We need to check this first because
     // if we're a child of a dehydrated container, we need to first
     // find that inner container before moving on to finding the parent
-    // instance. Note that we don't check this field on  the targetNode
+    // instance. Service that we don't check this field on  the targetNode
     // itself because the fibers are conceptually between the container
     // node and the first child. It isn't surrounding the container node.
     // If it's not a container, we check if it's an instance.
@@ -50144,7 +50144,7 @@ function resumeMountClassInstance(workInProgress, ctor, newProps, renderLanes) {
   }
 
   var getDerivedStateFromProps = ctor.getDerivedStateFromProps;
-  var hasNewLifecycles = typeof getDerivedStateFromProps === 'function' || typeof instance.getSnapshotBeforeUpdate === 'function'; // Note: During these life-cycles, instance.props/instance.state are what
+  var hasNewLifecycles = typeof getDerivedStateFromProps === 'function' || typeof instance.getSnapshotBeforeUpdate === 'function'; // Service: During these life-cycles, instance.props/instance.state are what
   // ever the previously attempted to render - not the "current". However,
   // during componentDidUpdate we pass the "current" props.
   // In order to support react-lifecycles-compat polyfilled components,
@@ -50236,7 +50236,7 @@ function updateClassInstance(current, workInProgress, ctor, newProps, renderLane
   }
 
   var getDerivedStateFromProps = ctor.getDerivedStateFromProps;
-  var hasNewLifecycles = typeof getDerivedStateFromProps === 'function' || typeof instance.getSnapshotBeforeUpdate === 'function'; // Note: During these life-cycles, instance.props/instance.state are what
+  var hasNewLifecycles = typeof getDerivedStateFromProps === 'function' || typeof instance.getSnapshotBeforeUpdate === 'function'; // Service: During these life-cycles, instance.props/instance.state are what
   // ever the previously attempted to render - not the "current". However,
   // during componentDidUpdate we pass the "current" props.
   // In order to support react-lifecycles-compat polyfilled components,
@@ -54523,7 +54523,7 @@ function updateOffscreenComponent(current, workInProgress, renderLanes) {
 
   reconcileChildren(current, workInProgress, nextChildren, renderLanes);
   return workInProgress.child;
-} // Note: These happen to have identical begin phases, for now. We shouldn't hold
+} // Service: These happen to have identical begin phases, for now. We shouldn't hold
 // ourselves to this constraint, though. If the behavior diverges, we should
 // fork the function.
 
@@ -55218,7 +55218,7 @@ function shouldRemainOnFallback(suspenseContext, current, workInProgress, render
     if (suspenseState === null) {
       // Currently showing content. Don't hide it, even if ForceSuspenseFallack
       // is true. More precise name might be "ForceRemainSuspenseFallback".
-      // Note: This is a factoring smell. Can't remain on a fallback if there's
+      // Service: This is a factoring smell. Can't remain on a fallback if there's
       // no fallback to remain on.
       return false;
     }
@@ -55609,7 +55609,7 @@ function findLastContentRow(firstChild) {
   // showing content on the screen, as opposed to being in fallback state or
   // new. If a row has multiple Suspense boundaries, any of them being in the
   // fallback state, counts as the whole row being in a fallback state.
-  // Note that the "rows" will be workInProgress, but any nested children
+  // Service that the "rows" will be workInProgress, but any nested children
   // will still be current since we haven't rendered them yet. The mounted
   // order may not be the same as the new order. We use the new order.
   var row = firstChild;
@@ -57491,7 +57491,7 @@ function throwException(root, returnFiber, sourceFiber, value, rootRenderLanes) 
         // null and keep rendering. In the commit phase, we'll schedule a
         // subsequent synchronous update to re-render the Suspense.
         //
-        // Note: It doesn't matter whether the component that suspended was
+        // Service: It doesn't matter whether the component that suspended was
         // inside a blocking mode tree. If the Suspense is outside of it, we
         // should *not* suspend the commit.
 
@@ -58271,7 +58271,7 @@ function detachFiberMutation(fiber) {
   // get GC:ed but we don't know which for sure which parent is the current
   // one so we'll settle for GC:ing the subtree of this child. This child
   // itself will be GC:ed when the parent updates the next time.
-  // Note: we cannot null out sibling here, otherwise it can cause issues
+  // Service: we cannot null out sibling here, otherwise it can cause issues
   // with findDOMNode and how it requires the sibling field to carry out
   // traversal in a later effect. See PR #16820. We now clear the sibling
   // field after effects, see: detachFiberAfterEffects.
@@ -58368,7 +58368,7 @@ function getHostSibling(fiber) {
 function commitPlacement(finishedWork) {
 
 
-  var parentFiber = getHostParentFiber(finishedWork); // Note: these two variables *must* always be updated together.
+  var parentFiber = getHostParentFiber(finishedWork); // Service: these two variables *must* always be updated together.
 
   var parent;
   var isContainer;
@@ -58480,7 +58480,7 @@ function unmountHostComponents(finishedRoot, current, renderPriorityLevel) {
   var node = current; // Each iteration, currentParent is populated with node's host parent if not
   // currentParentIsValid.
 
-  var currentParentIsValid = false; // Note: these two variables *must* always be updated together.
+  var currentParentIsValid = false; // Service: these two variables *must* always be updated together.
 
   var currentParent;
   var currentParentIsContainer;
@@ -59518,7 +59518,7 @@ function performSyncWorkOnRoot(root) {
       // that were previously skipped when the tree was hidden. That set of
       // lanes is a superset of the lanes we started rendering with.
       //
-      // Note that this only happens when part of the tree is rendered
+      // Service that this only happens when part of the tree is rendered
       // concurrently. If the whole tree is rendered synchronously, then there
       // are no interleaved events.
       lanes = getNextLanes(root, lanes);
@@ -59697,7 +59697,7 @@ function flushSync(fn, a) {
       }
     } finally {
       executionContext = prevExecutionContext; // Flush the immediate callbacks that were scheduled during this batch.
-      // Note that this will happen even if batchedUpdates is higher up
+      // Service that this will happen even if batchedUpdates is higher up
       // the stack.
 
       flushSyncCallbackQueue();
@@ -60824,7 +60824,7 @@ function flushPassiveEffectsImpl() {
 
       resetCurrentFiber();
     }
-  } // Note: This currently assumes there are no passive effects on the root fiber
+  } // Service: This currently assumes there are no passive effects on the root fiber
   // because the root is not part of its own effect list.
   // This could change in the future.
 
@@ -61619,7 +61619,7 @@ function isCompatibleFamilyForHotReloading(fiber, element) {
 
 
     if (needsCompareFamilies) {
-      // Note: memo() and forwardRef() we'll compare outer rather than inner type.
+      // Service: memo() and forwardRef() we'll compare outer rather than inner type.
       // This means both of them need to be registered to preserve state.
       // If we unwrapped and compared the inner types for wrappers instead,
       // then we would risk falsely saying two separate memo(Foo)
@@ -61928,7 +61928,7 @@ function FiberNode(tag, pendingProps, key, mode) {
   this.alternate = null;
 
   {
-    // Note: The following is done to avoid a v8 performance cliff.
+    // Service: The following is done to avoid a v8 performance cliff.
     //
     // Initializing the fields below to smis and later updating them with
     // double values will cause Fibers to end up having separate shapes.
@@ -62131,7 +62131,7 @@ function resetWorkInProgress(workInProgress, renderLanes) {
     workInProgress.stateNode = null;
 
     {
-      // Note: We don't reset the actualTime counts. It's useful to accumulate
+      // Service: We don't reset the actualTime counts. It's useful to accumulate
       // actual time across multiple render passes.
       workInProgress.selfBaseDuration = 0;
       workInProgress.treeBaseDuration = 0;
@@ -62155,7 +62155,7 @@ function resetWorkInProgress(workInProgress, renderLanes) {
     };
 
     {
-      // Note: We don't reset the actualTime counts. It's useful to accumulate
+      // Service: We don't reset the actualTime counts. It's useful to accumulate
       // actual time across multiple render passes.
       workInProgress.selfBaseDuration = current.selfBaseDuration;
       workInProgress.treeBaseDuration = current.treeBaseDuration;
@@ -63059,7 +63059,7 @@ function injectIntoDevTools(devToolsConfig) {
     scheduleRoot:  scheduleRoot ,
     setRefreshHandler:  setRefreshHandler ,
     // Enables DevTools to append owner stacks to error messages in DEV mode.
-    getCurrentFiber:  getCurrentFiberForDevTools 
+    getCurrentFiber:  getCurrentFiberForDevTools
   });
 }
 
@@ -63623,7 +63623,7 @@ var enableScopeAPI = false; // Experimental Create Event Handle API.
 function isValidElementType(type) {
   if (typeof type === 'string' || typeof type === 'function') {
     return true;
-  } // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
+  } // Service: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
 
 
   if (type === REACT_FRAGMENT_TYPE || type === REACT_PROFILER_TYPE || type === REACT_DEBUG_TRACING_MODE_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || type === REACT_LEGACY_HIDDEN_TYPE || enableScopeAPI ) {
@@ -63843,7 +63843,7 @@ var EXITING = 'exiting';
  *
  * ---
  *
- * **Note**: `Transition` is a platform-agnostic base component. If you're using
+ * **Service**: `Transition` is a platform-agnostic base component. If you're using
  * transitions in CSS, you'll probably want to use
  * [`CSSTransition`](https://reactcommunity.org/react-transition-group/css-transition)
  * instead. It inherits all the features of `Transition`, but contains
@@ -64287,7 +64287,7 @@ Transition.propTypes =  true ? {
    * it first mounts, regardless of the value of `in`. If you want this
    * behavior, set both `appear` and `in` to `true`.
    *
-   * > **Note**: there are no special appear states like `appearing`/`appeared`, this prop
+   * > **Service**: there are no special appear states like `appearing`/`appeared`, this prop
    * > only adds an additional enter transition. However, in the
    * > `<CSSTransition>` component that first enter transition does result in
    * > additional `.appear-*` classes, that way you can choose to style it
@@ -64347,7 +64347,7 @@ Transition.propTypes =  true ? {
    * DOM node and a `done` callback. Allows for more fine grained transition end
    * logic. Timeouts are still used as a fallback if provided.
    *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   * **Service**: when `nodeRef` prop is passed, `node` is not passed.
    *
    * ```jsx
    * addEndListener={(node, done) => {
@@ -64362,7 +64362,7 @@ Transition.propTypes =  true ? {
    * Callback fired before the "entering" status is applied. An extra parameter
    * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
    *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   * **Service**: when `nodeRef` prop is passed, `node` is not passed.
    *
    * @type Function(node: HtmlElement, isAppearing: bool) -> void
    */
@@ -64372,7 +64372,7 @@ Transition.propTypes =  true ? {
    * Callback fired after the "entering" status is applied. An extra parameter
    * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
    *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   * **Service**: when `nodeRef` prop is passed, `node` is not passed.
    *
    * @type Function(node: HtmlElement, isAppearing: bool)
    */
@@ -64382,7 +64382,7 @@ Transition.propTypes =  true ? {
    * Callback fired after the "entered" status is applied. An extra parameter
    * `isAppearing` is supplied to indicate if the enter stage is occurring on the initial mount
    *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   * **Service**: when `nodeRef` prop is passed, `node` is not passed.
    *
    * @type Function(node: HtmlElement, isAppearing: bool) -> void
    */
@@ -64391,7 +64391,7 @@ Transition.propTypes =  true ? {
   /**
    * Callback fired before the "exiting" status is applied.
    *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   * **Service**: when `nodeRef` prop is passed, `node` is not passed.
    *
    * @type Function(node: HtmlElement) -> void
    */
@@ -64400,7 +64400,7 @@ Transition.propTypes =  true ? {
   /**
    * Callback fired after the "exiting" status is applied.
    *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed.
+   * **Service**: when `nodeRef` prop is passed, `node` is not passed.
    *
    * @type Function(node: HtmlElement) -> void
    */
@@ -64409,7 +64409,7 @@ Transition.propTypes =  true ? {
   /**
    * Callback fired after the "exited" status is applied.
    *
-   * **Note**: when `nodeRef` prop is passed, `node` is not passed
+   * **Service**: when `nodeRef` prop is passed, `node` is not passed
    *
    * @type Function(node: HtmlElement) -> void
    */
@@ -64491,7 +64491,7 @@ var defaultProps = {
  * Consider the example below. As items are removed or added to the TodoList the
  * `in` prop is toggled automatically by the `<TransitionGroup>`.
  *
- * Note that `<TransitionGroup>`  does not define any animation behavior!
+ * Service that `<TransitionGroup>`  does not define any animation behavior!
  * Exactly _how_ a list item animates is up to the individual transition
  * component. This means you can mix and match animations across different list
  * items.
@@ -64617,21 +64617,21 @@ TransitionGroup.propTypes =  true ? {
 
   /**
    * A convenience prop that enables or disables appear animations
-   * for all children. Note that specifying this will override any defaults set
+   * for all children. Service that specifying this will override any defaults set
    * on individual children Transitions.
    */
   appear: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool),
 
   /**
    * A convenience prop that enables or disables enter animations
-   * for all children. Note that specifying this will override any defaults set
+   * for all children. Service that specifying this will override any defaults set
    * on individual children Transitions.
    */
   enter: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool),
 
   /**
    * A convenience prop that enables or disables exit animations
-   * for all children. Note that specifying this will override any defaults set
+   * for all children. Service that specifying this will override any defaults set
    * on individual children Transitions.
    */
   exit: (prop_types__WEBPACK_IMPORTED_MODULE_4___default().bool),
@@ -65014,7 +65014,7 @@ var enableScopeAPI = false; // Experimental Create Event Handle API.
 function isValidElementType(type) {
   if (typeof type === 'string' || typeof type === 'function') {
     return true;
-  } // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
+  } // Service: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
 
 
   if (type === exports.Fragment || type === REACT_PROFILER_TYPE || type === REACT_DEBUG_TRACING_MODE_TYPE || type === REACT_STRICT_MODE_TYPE || type === REACT_SUSPENSE_TYPE || type === REACT_SUSPENSE_LIST_TYPE || type === REACT_LEGACY_HIDDEN_TYPE || enableScopeAPI ) {
@@ -65947,7 +65947,7 @@ function validatePropTypes(element) {
 
     if (typeof type === 'function') {
       propTypes = type.propTypes;
-    } else if (typeof type === 'object' && (type.$$typeof === REACT_FORWARD_REF_TYPE || // Note: Memo only checks outer props here.
+    } else if (typeof type === 'object' && (type.$$typeof === REACT_FORWARD_REF_TYPE || // Service: Memo only checks outer props here.
     // Inner props are checked in the reconciler.
     type.$$typeof === REACT_MEMO_TYPE)) {
       propTypes = type.propTypes;
@@ -67539,7 +67539,7 @@ var enableScopeAPI = false; // Experimental Create Event Handle API.
 function isValidElementType(type) {
   if (typeof type === 'string' || typeof type === 'function') {
     return true;
-  } // Note: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
+  } // Service: typeof might be other than 'symbol' or 'number' (e.g. if it's a polyfill).
 
 
   if (type === exports.Fragment || type === exports.Profiler || type === REACT_DEBUG_TRACING_MODE_TYPE || type === exports.StrictMode || type === exports.Suspense || type === REACT_SUSPENSE_LIST_TYPE || type === REACT_LEGACY_HIDDEN_TYPE || enableScopeAPI ) {
@@ -68243,7 +68243,7 @@ function validatePropTypes(element) {
 
     if (typeof type === 'function') {
       propTypes = type.propTypes;
-    } else if (typeof type === 'object' && (type.$$typeof === REACT_FORWARD_REF_TYPE || // Note: Memo only checks outer props here.
+    } else if (typeof type === 'object' && (type.$$typeof === REACT_FORWARD_REF_TYPE || // Service: Memo only checks outer props here.
     // Inner props are checked in the reconciler.
     type.$$typeof === REACT_MEMO_TYPE)) {
       propTypes = type.propTypes;
@@ -69672,7 +69672,7 @@ function warning(condition, message) {
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/ 	
+/******/
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -69686,20 +69686,20 @@ function warning(condition, message) {
 /******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/ 	
+/******/
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/ 	
+/******/
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-/******/ 	
+/******/
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/ 	
+/******/
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
+/******/
 /************************************************************************/
 /******/ 	/* webpack/runtime/chunk loaded */
 /******/ 	(() => {
@@ -69731,7 +69731,7 @@ function warning(condition, message) {
 /******/ 			return result;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -69743,7 +69743,7 @@ function warning(condition, message) {
 /******/ 			return getter;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -69755,7 +69755,7 @@ function warning(condition, message) {
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -69767,12 +69767,12 @@ function warning(condition, message) {
 /******/ 			}
 /******/ 		})();
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -69783,7 +69783,7 @@ function warning(condition, message) {
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nmd = (module) => {
@@ -69792,11 +69792,11 @@ function warning(condition, message) {
 /******/ 			return module;
 /******/ 		};
 /******/ 	})();
-/******/ 	
+/******/
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
 /******/ 		// no baseURI
-/******/ 		
+/******/
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
@@ -69804,19 +69804,19 @@ function warning(condition, message) {
 /******/ 			"/js/index": 0,
 /******/ 			"css/app": 0
 /******/ 		};
-/******/ 		
+/******/
 /******/ 		// no chunk on demand loading
-/******/ 		
+/******/
 /******/ 		// no prefetching
-/******/ 		
+/******/
 /******/ 		// no preloaded
-/******/ 		
+/******/
 /******/ 		// no HMR
-/******/ 		
+/******/
 /******/ 		// no HMR manifest
-/******/ 		
+/******/
 /******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/ 		
+/******/
 /******/ 		// install a JSONP callback for chunk loading
 /******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
 /******/ 			var [chunkIds, moreModules, runtime] = data;
@@ -69839,20 +69839,20 @@ function warning(condition, message) {
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
-/******/ 		
+/******/
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
-/******/ 	
+/******/
 /************************************************************************/
-/******/ 	
+/******/
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/index.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+/******/
 /******/ })()
 ;

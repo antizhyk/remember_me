@@ -29,7 +29,7 @@ const Header = React.memo(({open, classes, handleDrawerOpen}) => (
                         My notes
                     </Typography>
                 </Toolbar>
-                <LayoutGetData variant="outlined"  href='/get_data'>refresh</LayoutGetData>
+                <LayoutGetData variant="outlined"  href='/get_data'>update</LayoutGetData>
             </LayoutToolbar>
         </AppBar>
     )
