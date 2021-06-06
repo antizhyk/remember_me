@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Resources\Note;
+namespace App\Http\Resources\Folder;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class NoteResource extends JsonResource
+class FolderResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,10 +14,6 @@ class NoteResource extends JsonResource
      */
     public function toArray($request)
     {
-        return [
-          'title' => $this->title,
-          'content' => $this->content,
-          'folder' => $this->folder->title
-        ];
+        return ['title' => $this->title];
     }
 }

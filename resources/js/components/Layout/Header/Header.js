@@ -10,9 +10,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {getData} from "../../../redux/Note/actions";
 
 const Header = React.memo(({open, classes, handleDrawerOpen}) => {
-const dispatch = useDispatch(),
-    data = useSelector(({Note}) => Note.data)
-        console.log(data)
+const dispatch = useDispatch();
 const updateData = () => {
     dispatch(getData())
     }

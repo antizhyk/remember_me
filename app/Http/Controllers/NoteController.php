@@ -3,13 +3,15 @@
 namespace App\Http\Controllers;
 
 use App\Components\ImportDataClient;
+use App\Http\Resources\Folder\FolderResource;
 use App\Http\Resources\Note\NoteResource;
+use App\Models\Folder;
 use App\Models\Note;
+use Illuminate\Http\Resources\Json\JsonResource;
 
 class NoteController extends BaseController
 {
     public function index () {
-
         $import = new ImportDataClient();
         $responce = $import->client->request('GET', 'api/docs', [
             'headers' => [
@@ -19,9 +21,7 @@ class NoteController extends BaseController
         $data = (json_decode($responce->getBody()->getContents()));
         $this->service->update($data);
         $notes = Note::all();
+
         return NoteResource::collection($notes);
-
-        return view('welcome', compact('notes'));
-
     }
 }
