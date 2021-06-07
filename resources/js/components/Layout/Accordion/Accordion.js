@@ -23,7 +23,7 @@ const HeadAccordion = React.memo(() => {
         <div className={classes.root}>
             {data.folders && (data.folders.map(el => (
                 el.title && (
-                    <Accordion>
+                    <Accordion key={el.id}>
                         <AccordionSummary
                             expandIcon={<ExpandMoreIcon/>}
                             aria-controls="panel1a-content"
@@ -36,6 +36,7 @@ const HeadAccordion = React.memo(() => {
                             {data.notes && data.notes.map(note => (
                                 note.folder = el.title && (
                                         <ListItem
+                                            key={note.id}
                                             button
                                             selected={selectedIndex === note.id}
                                             onClick={(event) => handleListItemClick(event, note.id, note.content)}

@@ -58,10 +58,7 @@ const Layout = React.memo(() => {
                 })}
             >
                 <div className={classes.drawerHeader} />
-                <Typography paragraph>
                     <div dangerouslySetInnerHTML={{__html: content,}}></div>
-                    <img src='https://boostnote.io/api/teams/nhFMY3a5g/files/104d90509582b4dfd282f68a476f644a60b33311a60f9b260b25a636a4fa7b25-2021-06-03_17-38.png'/>
-                </Typography>
             </main>
         </LayoutWrapper>
     );
