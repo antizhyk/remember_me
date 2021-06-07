@@ -21,8 +21,6 @@ class NoteController extends BaseController
         $data = (json_decode($responce->getBody()->getContents()));
         $this->service->update($data);
         $notes = Note::all();
-        $folder = Folder::all();
-//        new FolderResource($folder);
         return NoteResource::collection($notes);
     }
 }

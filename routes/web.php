@@ -19,3 +19,4 @@ Route::get('/', function () {
 
 
 Route::get('/get_data', 'NoteController@index')->name('data.index');
+Route::get('/get_folder', 'FolderController@index')->name('folder.index');

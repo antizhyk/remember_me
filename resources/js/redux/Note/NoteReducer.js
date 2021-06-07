@@ -1,7 +1,8 @@
-import {GET_DATA} from "./types";
+import {GET_DATA, GET_FOLDERS} from "./types";
 
 const initialState = {
-data: null
+notes: null,
+folders: null,
 }
 
 const NoteReducer = (state = initialState, action) => {
@@ -10,7 +11,12 @@ const NoteReducer = (state = initialState, action) => {
         case GET_DATA:
             return {
                 ...state,
-                data: action.data
+                notes: action.data
+            }
+        case GET_FOLDERS:
+            return {
+                ...state,
+                folders: action.data
             }
         default:
             return state;

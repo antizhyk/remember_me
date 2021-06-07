@@ -14651,7 +14651,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 var initialState = {
-  data: null
+  notes: null,
+  folders: null
 };
 
 var NoteReducer = function NoteReducer() {
@@ -14661,7 +14662,12 @@ var NoteReducer = function NoteReducer() {
   switch (action.type) {
     case _types__WEBPACK_IMPORTED_MODULE_0__.GET_DATA:
       return _objectSpread(_objectSpread({}, state), {}, {
-        data: action.data
+        notes: action.data
+      });
+
+    case _types__WEBPACK_IMPORTED_MODULE_0__.GET_FOLDERS:
+      return _objectSpread(_objectSpread({}, state), {}, {
+        folders: action.data
       });
 
     default:
@@ -14683,7 +14689,8 @@ var NoteReducer = function NoteReducer() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "getData": () => (/* binding */ getData),
-/* harmony export */   "saveData": () => (/* binding */ saveData)
+/* harmony export */   "saveData": () => (/* binding */ saveData),
+/* harmony export */   "saveFolders": () => (/* binding */ saveFolders)
 /* harmony export */ });
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
@@ -14697,11 +14704,22 @@ var getData = function getData() {
     })["catch"](function (err) {
       return console.error(err);
     });
+    axios__WEBPACK_IMPORTED_MODULE_0___default().get('/get_folder').then(function (folder) {
+      return dispatch(saveFolders(folder.data.data));
+    })["catch"](function (err) {
+      return console.error(err);
+    });
   };
 };
 var saveData = function saveData(data) {
   return {
     type: _types__WEBPACK_IMPORTED_MODULE_1__.GET_DATA,
+    data: data
+  };
+};
+var saveFolders = function saveFolders(data) {
+  return {
+    type: _types__WEBPACK_IMPORTED_MODULE_1__.GET_FOLDERS,
     data: data
   };
 };
@@ -14717,9 +14735,11 @@ var saveData = function saveData(data) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "GET_DATA": () => (/* binding */ GET_DATA)
+/* harmony export */   "GET_DATA": () => (/* binding */ GET_DATA),
+/* harmony export */   "GET_FOLDERS": () => (/* binding */ GET_FOLDERS)
 /* harmony export */ });
 var GET_DATA = 'GET_DATA';
+var GET_FOLDERS = 'GET_FOLDERS';
 
 /***/ }),
 
