@@ -9,15 +9,16 @@ class NoteResource extends JsonResource
     /**
      * Transform the resource into an array.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return array
      */
     public function toArray($request)
     {
         return [
-          'title' => $this->title,
-          'content' => $this->content,
-          'folder' => $this->folder->title
+            'id' => $this->id,
+            'title' => $this->title,
+            'content' => $this->content,
+            'folder' => $this->folder->title
         ];
     }
 }

@@ -3,7 +3,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import Button from '@material-ui/core/Button';
 import Toolbar from "@material-ui/core/Toolbar";
 
-const drawerWidth = 240;
+const drawerWidth = 320;
 
 export const useStyles = makeStyles((theme) => ({
     root: {

@@ -10,8 +10,8 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import {LayoutWrapper, useStyles} from "./styles";
 import Header from "./Header/Header";
-import Accordion from "./Accordion/Accordion";
 import {List} from "@material-ui/core";
+import HeadAccordion from "./Accordion/Accordion";
 
 const Layout = React.memo(() => {
     const classes = useStyles();
@@ -46,7 +46,7 @@ const Layout = React.memo(() => {
                 </div>
                 <Divider />
                 <List>
-                    <Accordion/>
+                    <HeadAccordion/>
                 </List>
                 <Divider />
             </Drawer>

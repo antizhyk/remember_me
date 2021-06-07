@@ -1,41 +1,53 @@
 import React, {useEffect} from 'react';
-import TreeView from '@material-ui/lab/TreeView';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import TreeItem from '@material-ui/lab/TreeItem';
-import {useStyles} from "./styles";
+import {AccordionItem, AccordionText, useStyles} from "./styles";
 import {useDispatch, useSelector} from "react-redux";
 import {getData} from "../../../redux/Note/actions";
+import {Accordion, AccordionDetails, AccordionSummary, List, ListItem, ListItemText} from "@material-ui/core";
+import Typography from "@material-ui/core/Typography";
 
-const Accordion = React.memo(() => {
+const HeadAccordion = React.memo(() => {
     const classes = useStyles();
     const data = useSelector(({Note}) => Note);
     const dispatch = useDispatch();
+    const [selectedIndex, setSelectedIndex] = React.useState(1);
+
+    const handleListItemClick = (event, index) => {
+        setSelectedIndex(index);
+    };
     useEffect(() => {
         dispatch(getData())
     }, [])
-    console.log(data)
     return (
-        <TreeView
-            className={classes.root}
-            defaultCollapseIcon={<ExpandMoreIcon/>}
-            defaultExpandIcon={<ChevronRightIcon/>}
-            multiSelect
-        >
-                    <TreeItem nodeId="1" label="Applications">
-                        <TreeItem nodeId="2" label="Calendar"/>
-                        <TreeItem nodeId="3" label="Chrome"/>
-                        <TreeItem nodeId="4" label="Webstorm"/>
-                    </TreeItem>
-                    <TreeItem nodeId="5" label="Documents">
-                        <TreeItem nodeId="6" label="Material-UI">
-                            <TreeItem nodeId="7" label="src">
-                                <TreeItem nodeId="8" label="index.js"/>
-                                <TreeItem nodeId="9" label="tree-view.js"/>
-                            </TreeItem>
-                        </TreeItem>
-                    </TreeItem>
-                </TreeView>
-            )})
+        <div className={classes.root}>
+            {data.folders && (data.folders.map(el => (
+                el.title && (
+                    <Accordion>
+                        <AccordionSummary
+                            expandIcon={<ExpandMoreIcon/>}
+                            aria-controls="panel1a-content"
+                            id={el.title}
+                        >
+                            <Typography className={classes.heading}>{el.title}</Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <List component="nav" aria-label="secondary mailbox folder">
+                            {data.notes && data.notes.map(note => (
+                                note.folder = el.title && (
+                                        <ListItem
+                                            button
+                                            selected={selectedIndex === note.id}
+                                            onClick={(event) => handleListItemClick(event, note.id)}
+                                        >
+                                            <AccordionText primary={note.title}/>
+                                        </ListItem>
+                                   )))}
+                            </List>
+                        </AccordionDetails>
+                    </Accordion>
+                ))))}
+        </div>
+    )
+})
 
-            export default Accordion
+export default HeadAccordion
