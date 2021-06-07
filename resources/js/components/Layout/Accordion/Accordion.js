@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {AccordionItem, AccordionText, useStyles} from "./styles";
 import {useDispatch, useSelector} from "react-redux";
-import {getData} from "../../../redux/Note/actions";
+import {getData, viewContent} from "../../../redux/Note/actions";
 import {Accordion, AccordionDetails, AccordionSummary, List, ListItem, ListItemText} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 
@@ -12,8 +12,9 @@ const HeadAccordion = React.memo(() => {
     const dispatch = useDispatch();
     const [selectedIndex, setSelectedIndex] = React.useState(1);
 
-    const handleListItemClick = (event, index) => {
+    const handleListItemClick = (event, index, data) => {
         setSelectedIndex(index);
+        dispatch(viewContent(data))
     };
     useEffect(() => {
         dispatch(getData())
@@ -37,7 +38,7 @@ const HeadAccordion = React.memo(() => {
                                         <ListItem
                                             button
                                             selected={selectedIndex === note.id}
-                                            onClick={(event) => handleListItemClick(event, note.id)}
+                                            onClick={(event) => handleListItemClick(event, note.id, note.content)}
                                         >
                                             <AccordionText primary={note.title}/>
                                         </ListItem>

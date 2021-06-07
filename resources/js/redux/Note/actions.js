@@ -1,5 +1,5 @@
 import axios from "axios";
-import {GET_DATA, GET_FOLDERS} from "./types";
+import {GET_DATA, GET_FOLDERS, VIEW_CONTENT} from "./types";
 
 export const getData = () => (dispatch) => {
     axios.get('/get_data')
@@ -11,16 +11,23 @@ export const getData = () => (dispatch) => {
         .catch(err => console.error(err))
 }
 
-export const saveData = (data) => {
+export const saveData = data => {
     return {
         type: GET_DATA,
         data
     }
 }
 
-export const saveFolders = (data) => {
+export const saveFolders = data => {
     return {
         type: GET_FOLDERS,
+        data
+    }
+}
+
+export const viewContent = data => {
+    return {
+        type: VIEW_CONTENT,
         data
     }
 }

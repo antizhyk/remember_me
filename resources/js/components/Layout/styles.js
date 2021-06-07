@@ -42,7 +42,8 @@ export const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(0, 1),
         // necessary for content to be below app bar
         ...theme.mixins.toolbar,
-        justifyContent: 'flex-end',
+        justifyContent: 'space-between',
+        textAlign: 'left',
     },
     content: {
         flexGrow: 1,
@@ -83,4 +84,9 @@ export const LayoutGetData = styled(Button)`
         color: #ffffff;
         border: 2px solid #ffffff;
     }
+`
+
+export const LayoutScheduler = styled.div`
+    font-size: 20px;
+    cursor: pointer;
 `

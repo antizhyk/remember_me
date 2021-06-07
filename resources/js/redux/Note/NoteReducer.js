@@ -1,13 +1,14 @@
-import {GET_DATA, GET_FOLDERS} from "./types";
+import {GET_DATA, GET_FOLDERS, VIEW_CONTENT} from "./types";
 
 const initialState = {
-notes: null,
-folders: null,
+    notes: null,
+    folders: null,
+    content: null,
 }
 
 const NoteReducer = (state = initialState, action) => {
 
-    switch (action.type){
+    switch (action.type) {
         case GET_DATA:
             return {
                 ...state,
@@ -17,6 +18,11 @@ const NoteReducer = (state = initialState, action) => {
             return {
                 ...state,
                 folders: action.data
+            }
+        case VIEW_CONTENT:
+            return {
+                ...state,
+                content: action.data
             }
         default:
             return state;
