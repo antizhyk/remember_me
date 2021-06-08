@@ -13,9 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+Route::get('/{query}', function () {
     return view('welcome');
-})->name('index');
+})->where('query', '.*')->name('index');
 
 
 Route::get('/get_data', 'NoteController@index')->name('data.index');
