@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {LayoutGetData} from "../Layout/styles";
-import {TextField} from "@material-ui/core";
+import {Link} from "react-router-dom";
 
 export const SignInWrapper = styled.div`
     width: 100vw;
@@ -16,14 +16,22 @@ export const SingInContainer = styled.div`
     width: 90%;
     background-color: #3F51B5;
     border-radius: 25px;
-    padding: 25px;
+    padding: 35px;
 `
 
 export const SignInForm = styled.form`
     display: flex;
     flex-direction: column;
+
     input {
         color: #ffffff;
+        height: 100%;
+    }
+
+    .PrivateNotchedOutline-legendLabelled-3{
+      span{
+      display: none;
+      }
     }
 
     .MuiFormLabel-root,
@@ -40,7 +48,11 @@ export const SignInForm = styled.form`
     }
 
     .MuiFormControl-root {
-        margin-bottom: 10px;
+        margin-bottom: 30px;
+    }
+
+    .MuiInputLabel-outlined.MuiInputLabel-shrink{
+      transform: translate(14px, -22px)
     }
 
     .MuiOutlinedInput-notchedOutline, .MuiButton-outlined {
@@ -57,4 +69,11 @@ export const SignInForm = styled.form`
 
 export const SignInBtn = styled(LayoutGetData)`
 
+`
+
+export const SignInLink = styled(Link)`
+  text-decoration: none;
+  color: #ffffff;
+  margin-bottom: 10px;
+  font-size: 20px;
 `

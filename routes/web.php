@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +14,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/{query}', function () {
-    return view('welcome');
-})->where('query', '.*')->name('index');
-
-
 Route::get('/get_data', 'NoteController@index')->name('data.index');
 Route::get('/get_folder', 'FolderController@index')->name('folder.index');
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::get('/{query}', function () {
+    return view('welcome');
+})->where('query', '^((?!api).)*$')->name('index');
+
+Auth::routes();
+
+
+

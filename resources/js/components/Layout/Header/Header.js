@@ -8,12 +8,19 @@ import Typography from "@material-ui/core/Typography";
 import {LayoutGetData, LayoutToolbar} from "../styles";
 import {useDispatch, useSelector} from "react-redux";
 import {getData} from "../../../redux/Note/actions";
+import {Link} from "react-router-dom";
+import {logout} from "../../../redux/User/actions";
 
 const Header = React.memo(({open, classes, handleDrawerOpen}) => {
-const dispatch = useDispatch();
-const updateData = () => {
-    dispatch(getData())
-    }
+        const dispatch = useDispatch();
+
+        const updateData = () => {
+            dispatch(getData())
+        }
+
+        const output = () => {
+            dispatch(logout())
+        }
 
         return (
             <AppBar
@@ -37,7 +44,10 @@ const updateData = () => {
                             My notes
                         </Typography>
                     </Toolbar>
-                    <LayoutGetData variant="outlined" onClick={updateData}>update</LayoutGetData>
+                    <div>
+                        <LayoutGetData variant="outlined" onClick={output}>Logout</LayoutGetData>
+                        <LayoutGetData variant="outlined" onClick={updateData}>update</LayoutGetData>
+                    </div>
                 </LayoutToolbar>
             </AppBar>
         )

@@ -58,7 +58,7 @@ const Layout = React.memo(() => {
                 })}
             >
                 <div className={classes.drawerHeader} />
-                    <div dangerouslySetInnerHTML={{__html: content,}}></div>
+                    <div dangerouslySetInnerHTML={{__html: content,}}/>
             </main>
         </LayoutWrapper>
     );

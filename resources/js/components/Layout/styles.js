@@ -79,10 +79,15 @@ export const LayoutGetData = styled(Button)`
     color: rgba(255, 255, 255, 0.75);
     border: 2px solid rgba(255, 255, 255, 0.75);
     transition: all .3s;
+    margin-right: 15px;
 
     &:hover{
         color: #ffffff;
         border: 2px solid #ffffff;
+    }
+
+    &:last-child{
+        margin-right: 0;
     }
 `
 
