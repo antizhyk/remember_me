@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
+use App\Http\Controllers\BaseController;
+use App\Http\Resources\User\UserResource;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
-class LoginController extends Controller
+class LoginController extends BaseController
 {
     /*
     |--------------------------------------------------------------------------
@@ -46,10 +46,11 @@ class LoginController extends Controller
     public function login(Request $request)
     {
         $credentials = $request->only(['data.login', 'data.password']);
+
         if (Auth::attempt($credentials['data'])) {
             $request->session()->regenerate();
             $user = Auth::user();
-            return redirect('/')->with($user);
+            return new UserResource($user);
         }
 
         return back()->withErrors([

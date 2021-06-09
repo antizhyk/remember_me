@@ -1,19 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Note;
 
-use App\Components\ImportDataClient;
-use App\Http\Resources\Folder\FolderResource;
+use App\Http\Controllers\BaseController;
 use App\Http\Resources\Note\NoteResource;
-use App\Models\Folder;
 use App\Models\Note;
-use http\Client\Curl\User;
-use Illuminate\Http\Resources\Json\JsonResource;
 use Illuminate\Support\Facades\Auth;
 
 class NoteController extends BaseController
 {
-    public function index()
+    public function __invoke()
     {
         $user = Auth::user();
         $token = $user->token_for_boost_note;

@@ -1,6 +1,6 @@
 import axios from "axios";
 import {setRedirect} from "../Redirect/actions";
-import {ADD_USER, REMOVE_USER} from "./types";
+import {ADD_USER, GET_STATUS_USER, REMOVE_USER} from "./types";
 
 export const signUp = (data) => (dispatch) => {
     axios.post('/register', {
@@ -31,7 +31,7 @@ export const logout = () => (dispatch) => {
             dispatch(removeUser())
             dispatch(setRedirect('/login'))
         })
-        .catch(error => alert('Error'))
+        .catch(() => alert('Error'))
 }
 
 export const login = (login, password) => (dispatch) => {
@@ -43,8 +43,7 @@ export const login = (login, password) => (dispatch) => {
         }
     })
         .then((responce) => {
-            console.log('res', responce)
-            // dispatch(addUser(data))
+            dispatch(addUser(responce.data.data))
             dispatch(setRedirect('/'))
         })
         .catch(error => {
@@ -66,5 +65,18 @@ export const addUser = data => {
 export const removeUser = () => {
     return {
         type: REMOVE_USER
+    }
+}
+
+export const getStatus = () => (dispatch) => {
+    axios.get('/get_status')
+        .then(status => dispatch(setStatus(!!status.data)))
+        .catch(err => console.error(err))
+}
+
+export const setStatus = data => {
+    return{
+        type: GET_STATUS_USER,
+        data
     }
 }

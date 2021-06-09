@@ -9,7 +9,6 @@ export default function UseRedirect() {
   const dispatch = useDispatch()
   const searchParams = new URLSearchParams(history.location.search);
   const url = searchParams.get("redirect")
-console.log('redirect')
   useEffect(() => {
     if (redirect) {
       history.push(url || redirect)
