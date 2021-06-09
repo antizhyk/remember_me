@@ -25,21 +25,21 @@ Route::group(['namespace' => 'User'], function () {
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-//Route::get('/{query}', function () {
+Route::get('/{query}', function () {
+    return view('welcome');
+})->where('query', '^((?!api).)*$')->name('index');
+
+//Route::get('/register', function () {
 //    return view('welcome');
-//})->where('query', '^((?!api).)*$')->name('index');
-
-Route::get('/register', function () {
-    return view('welcome');
-})->name('register');
-
-Route::get('/login', function () {
-    return view('welcome');
-})->name('login');
-
-Route::get('/', function () {
-    return view('welcome');
-});
+//})->name('register');
+//
+//Route::get('/login', function () {
+//    return view('welcome');
+//})->name('login');
+//
+//Route::get('/', function () {
+//    return view('welcome');
+//});
 
 Auth::routes();
 

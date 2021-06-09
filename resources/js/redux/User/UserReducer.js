@@ -1,8 +1,7 @@
-import {ADD_USER, GET_STATUS_USER, REMOVE_USER} from "./types";
+import {ADD_USER, REMOVE_USER} from "./types";
 
 const initialState = {
     user: null,
-    auth: false,
 }
 
 const UserReducer = (state = initialState, action) => {
@@ -16,12 +15,6 @@ const UserReducer = (state = initialState, action) => {
             return {
                 ...state,
                 user: null,
-            }
-         case GET_STATUS_USER:
-             console.log('data', action.data)
-            return {
-                ...state,
-                auth: action.data,
             }
         default:
             return state

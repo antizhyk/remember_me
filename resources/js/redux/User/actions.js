@@ -30,6 +30,7 @@ export const logout = () => (dispatch) => {
         .then(() => {
             dispatch(removeUser())
             dispatch(setRedirect('/login'))
+            localStorage.removeItem('auth')
         })
         .catch(() => alert('Error'))
 }
@@ -45,6 +46,7 @@ export const login = (login, password) => (dispatch) => {
         .then((responce) => {
             dispatch(addUser(responce.data.data))
             dispatch(setRedirect('/'))
+            responce.data.data ? localStorage.setItem('auth', 'true') : localStorage.setItem('auth', '')
         })
         .catch(error => {
             if (error.response) {
@@ -68,15 +70,3 @@ export const removeUser = () => {
     }
 }
 
-export const getStatus = () => (dispatch) => {
-    axios.get('/get_status')
-        .then(status => dispatch(setStatus(!!status.data)))
-        .catch(err => console.error(err))
-}
-
-export const setStatus = data => {
-    return{
-        type: GET_STATUS_USER,
-        data
-    }
-}

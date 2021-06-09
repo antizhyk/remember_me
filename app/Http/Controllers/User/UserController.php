@@ -9,10 +9,7 @@ use Illuminate\Support\Facades\Auth;
 class UserController extends Controller
 {
     public function __invoke () {
-
-        $user = Auth::user();
-
-        if($user){
+        if(Auth::check()){
             return response(true);
         }
         return null;
