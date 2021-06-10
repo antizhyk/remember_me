@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {SignInBtn, SignInForm, SignInWrapper, SingInContainer} from "../SignIn/styles";
+import {SignInBtn, SignInForm, SignInLink, SignInWrapper, SingInContainer} from "../SignIn/styles";
 import {TextField} from "@material-ui/core";
 import {useDispatch} from "react-redux";
 import {signUp} from "../../redux/User/actions";
@@ -39,6 +39,7 @@ const SignUp = React.memo(() => {
                     <TextField label="Confirm Password" value={values.passwordConfirmation}
                                variant="outlined" type='password' onChange={handler('passwordConfirmation')}
                                name='password_confirmation'/>
+                    <SignInLink to="/login">Login</SignInLink>
                     <SignInBtn type='submit' variant="outlined">Register</SignInBtn>
                 </SignInForm>
             </SingInContainer>

@@ -21,6 +21,7 @@ class User extends Authenticatable
         'password',
         'login',
         'token_for_boost_note',
+        'token_for_firebase'
     ];
 
     /**

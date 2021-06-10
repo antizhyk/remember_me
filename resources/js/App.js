@@ -4,8 +4,11 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import UseRedirect from "./hooks/useRedirect";
 import PrivateRoute from "./routers/PrivateRoute";
+import pushMess from "./assest/pushMess";
 
 const App = () => {
+    pushMess();
+
     return(
         <BrowserRouter>
             <UseRedirect />

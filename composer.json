@@ -12,7 +12,8 @@
         "laravel/framework": "^8.40",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.3",
-        "league/commonmark": "^1.6"
+        "league/commonmark": "^1.6",
+      "ext-curl": "*"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

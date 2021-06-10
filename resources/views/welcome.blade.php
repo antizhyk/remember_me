@@ -10,5 +10,12 @@
 <body class="antialiased">
 <div id="root"></div>
 <script src="{{asset('js/index.js')}}"></script>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/firebase-messaging-sw.js');
+        });
+    }
+</script>
 </body>
 </html>
